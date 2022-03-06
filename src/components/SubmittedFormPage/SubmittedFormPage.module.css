@@ -1,0 +1,63 @@
+.SubmitedPage {
+  width: 1920px;
+  height: 1080px;
+  background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+}
+
+.Header {
+  position: absolute;
+  width: 1128px;
+  height: 100px;
+  left: 359px;
+  top: 94px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 70px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.11em;
+
+  color: #ffffff;
+}
+
+.Dropdown {
+  position: absolute;
+  width: 1154px;
+  height: 52px;
+  left: 343px;
+  top: 291px;
+
+  /* Redberry Red */
+
+  background: #fe3b1f;
+}
+
+.NumberOfForms {
+  position: absolute;
+  width: 46px;
+  height: 20px;
+  left: 25px;
+  top: 0;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+}
+
+.DropDownIcon {
+    position: absolute;
+    width: 12.02px;
+    height: 7.42px;
+    left: 1120px;
+    top: 22px;
+  background: url(../../assets/DropDownArrow.svg) no-repeat;
+}

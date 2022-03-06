@@ -1,0 +1,405 @@
+.LeftHeader {
+  position: absolute;
+  width: 788px;
+  height: 175px;
+  left: 51px;
+  top: 61px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* Redberry Red */
+
+  color: #fe3b1f;
+}
+.RightPage {
+  float: right;
+  background-color: black;
+  width: 1007px;
+  height: 1380px;
+}
+
+.RightHeader {
+  position: absolute;
+  width: 788px;
+  height: 175px;
+  left: 1066px;
+  top: 61px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+
+  /* Redberry Red */
+
+  color: #fe3b1f;
+}
+
+.RightBody {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  left: 1074px;
+  top: 251px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: left;
+  /* or 48px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+.WorkLocation {
+  position: absolute;
+  top: 26px;
+}
+
+.Location {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 166px;
+  top: 289px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.OfficeButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 367px;
+  margin-left: 0;
+}
+.Office {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 195px;
+  top: 366px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.HomeButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 405px;
+  margin-left: 0;
+}
+.Home {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 403px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.HybridButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 441px;
+  margin-left: 0;
+  border: 1px solid #293b69;
+}
+.Hybrid {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 439px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.Contact {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 166px;
+  top: 513px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.YesButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 598px;
+  margin-left: 0;
+}
+.Yes {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 195px;
+  top: 596px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.NoButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 627px;
+  margin-left: 0;
+}
+
+.No {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 625px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.When {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 166px;
+  top: 674px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.DateOfCovid {
+  width: 455px;
+  height: 54px;
+  right: 38px;
+
+  top: 730px;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+
+    
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #454545;
+}
+.DateOfCovid[type="date"] {
+  position: relative;
+  padding: 20px;
+  padding-left: 35px;
+}
+.DateOfCovid[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: url(../../assets/calendar.svg) no-repeat;
+  z-index: 1;
+}
+
+.Vaccinate {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 166px;
+  top: 867px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.VaccinatedButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 948px;
+  margin-left: 0;
+}
+.Vaccinated {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 195px;
+  top: 947px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.NotVaccinatedButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 978px;
+  margin-left: 0;
+}
+.NotVaccinated {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 976px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.LastVaccine {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 166px;
+  top: 1033px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.DateOfVaccine {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 166px;
+  top: 1129px;
+
+  background: #ffffff;
+  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #454545;
+}
+.DateOfVaccine[type="date"] {
+  padding: 20px;
+  padding-left: 35px;
+}
+.DateOfVaccine[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  background: url(../../assets/calendar.svg) no-repeat;
+  z-index: 2;
+}
+
+.ThirdStepsButtons{
+  position: absolute;
+  top: 1289px;
+  left: 267px;
+}

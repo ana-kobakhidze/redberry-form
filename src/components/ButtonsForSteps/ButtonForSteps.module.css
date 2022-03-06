@@ -1,0 +1,98 @@
+
+.Wraper{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.Previous {
+    width: 22px;
+    height: 22px;
+
+    cursor: pointer;
+    background: url(../../assets/Previous.svg) no-repeat;
+}
+.FirstStep {
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+
+.SecondStep {
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+.SecondStep :active {
+  opacity: 0;
+}
+.ThirdStep {
+  width: 19px;
+  height: 19px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+.ThirdStep :active {
+  opacity: 0;
+}
+.ForthStep {
+  width: 19px;
+  height: 19px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+
+.ForthStep :active {
+  opacity: 0;
+}
+
+.FifthStep {
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: #fe3b1f;
+  opacity: 0.1;
+}
+
+.FifthStep :active {
+  opacity: 0;
+}
+.Next {
+  width: 22px;
+  height: 22px;
+
+
+  cursor: pointer;
+  background: url(../../assets/Next.svg) no-repeat;
+}

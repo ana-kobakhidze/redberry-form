@@ -1,0 +1,213 @@
+.LeftHeader {
+  position: absolute;
+  width: 788px;
+  height: 175px;
+  left: 140px;
+  top: 43px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+.RightPage {
+  float: right;
+  background-color: black;
+  width: 1007px;
+  height: 1080px;
+}
+
+.RightHeader {
+  position: absolute;
+  width: 788px;
+  height: 175px;
+  left: 1023px;
+  top: 43px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #fe3b1f;
+}
+
+.RightBody {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  left: 1111px;
+  top: 287px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  /* or 48px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+  text-align: left;
+}
+
+.Activities {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.Activity {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 153px;
+  top: 345px;
+  text-align: left;
+}
+.YesButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 150px;
+  top: 411px;
+}
+.Yes {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 178px;
+  top: 409px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.NoButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 149px;
+  top: 449px;
+}
+.No {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 178px;
+  top: 448px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.Devtalk {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 153px;
+  top: 524px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.DevtalkTextArea {
+  padding: 25px;
+  position: absolute;
+  width: 535px;
+  height: 122px;
+  left: 2px;
+  top: 66px;
+
+  background: #ffffff;
+  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #3a3a3a;
+}
+
+.Special {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 153px;
+  top: 750px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.SpecialTextArea {
+  position: absolute;
+  width: 535px;
+  height: 89px;
+  left: 2px;
+  top: 64px;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #3a3a3a;
+  padding: 25px;
+}
+
+/* .ForthStepButtons{
+  position: absolute;
+  top: 991px;
+  left: 304px;
+} */
