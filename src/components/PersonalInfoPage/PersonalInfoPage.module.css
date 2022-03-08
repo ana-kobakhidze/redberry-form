@@ -1,7 +1,8 @@
-.FirstStep{
+.FirstStep {
   width: 1920px;
   height: 1080px;
 }
+
 .LeftHeader {
   position: absolute;
   width: 716px;
@@ -17,9 +18,6 @@
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Redberry Red */
-
   color: #fe3b1f;
 }
 .RightPage {
@@ -44,8 +42,6 @@
   display: flex;
   align-items: center;
 
-  /* Redberry Red */
-
   color: #fe3b1f;
 }
 
@@ -62,12 +58,9 @@
   font-size: 24px;
   line-height: 200%;
   text-align: left;
-  /* or 48px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
-
   color: #ffffff;
 }
 
@@ -77,9 +70,7 @@
   height: 54px;
   left: 235px;
   top: 390px;
-
   background: #ffffff;
-  /* Primary Stroke */
 
   border: 1px solid #525557;
   box-sizing: border-box;
@@ -91,8 +82,42 @@
   display: flex;
   align-items: center;
   padding-left: 45px;
-
   color: #454545;
+}
+.InvalidFormName {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 390px;
+  background: #ffffff;
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  color: #454545;
+}
+
+.ErrorForName {
+  position: absolute;
+  width: 282px;
+  height: 16px;
+  left: 279px;
+  top: 437px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #fe3b1f;
 }
 
 .FormSurname {
@@ -101,23 +126,57 @@
   height: 54px;
   left: 235px;
   top: 481px;
-
   background: #ffffff;
-  /* Primary Stroke */
-
   border: 1px solid #525557;
   box-sizing: border-box;
   font-family: Montserrat;
   padding-left: 45px;
-
   font-style: italic;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   display: flex;
   align-items: center;
-
   color: #454545;
+}
+
+.InvalidFormSurname {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 481px;
+  background: #ffffff;
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding-left: 45px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #454545;
+}
+
+
+.ErrorForSurname {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 526px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
 }
 
 .FormEmail {
@@ -128,7 +187,70 @@
   top: 570px;
 
   background: #ffffff;
-  /* Primary Stroke */
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+.InvalidFormEmail{
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 570px;
+
+  background: #ffffff;
+
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+.ErrorForEmail {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 618px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.Phone {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 663px;
+
+  background: #ffffff;
 
   border: 1px solid #525557;
   box-sizing: border-box;
@@ -145,17 +267,16 @@
   color: #454545;
 }
 
-.FormNumber {
+.InvalidPhone {
   position: absolute;
   width: 455px;
   height: 54px;
   left: 235px;
-  top: 675px;
+  top: 663px;
 
   background: #ffffff;
-  /* Primary Stroke */
 
-  border: 1px solid #525557;
+  border: 1px solid #fe3b1f;
   box-sizing: border-box;
   padding-left: 45px;
 
@@ -168,6 +289,24 @@
   align-items: center;
 
   color: #454545;
+}
+
+.ErrorForPhone {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 710px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
 }
 /* .Buttons{
   position: absolute;

@@ -3,7 +3,13 @@ import styles from './SubmitPage.module.css';
 
 import { PAGES } from '../../Constants/CONSTANTS';
 
-const SubmitPage = ({setPageCounter}) => {
+const SubmitPage = ({setPageCounter, onSubmit}) => {
+    // const handleClick = (e) => {
+    //     e.preventDefaukt(); //
+    //     setPageCounter(PAGES.THANKS_PAGE);
+
+    // }
+
     return (
         <div className={styles.SubmitStep}>
         <button className={styles.SubmitButton} onClick={() => setPageCounter(PAGES.THANKS_PAGE)}>Submit</button>

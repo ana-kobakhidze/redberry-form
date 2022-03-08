@@ -1,9 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./PersonalInfoPage.module.css";
-import ButtonForSteps from '../ButtonsForSteps/ButtonsForSteps';
+import { useForm } from "react-hook-form";
 
-const PersonalInfoPage = (props) => {
-  console.log(props.count)
+const PersonalInfoPage = ({ personalInfo, valid, setPersonalInfo, setValid }) => {
+  const {
+    register,
+    formState: { errors, isValid },
+    trigger,
+    getValues,
+  } = useForm({mode: "onChange"});
+
+
+
+useEffect(() => {
+if(isValid){
+  setPersonalInfo({
+    first_name: getValues("first_name"),
+    last_name: getValues("last_name"),
+    email: getValues("email"),
+    phone: getValues("phone")});
+    setValid({...valid, firstStep: true})
+  };
+},[isValid])
+
 
   return (
     <div className={styles.FirstStep}>
@@ -20,33 +39,96 @@ const PersonalInfoPage = (props) => {
           for a yet to be born company was inspired - Redberry 😇
         </p>
       </div>
-      <form>
+      <form >
         <input
-          className={styles.FormName}
+          type="text"
+          className={errors.first_name ?  styles.InvalidFormName : styles.FormName }
+          defaultValue={personalInfo.first_name || ''}
+          autoComplete="off"
           placeholder="First Name"
-          type="text"
-          required
+          {...register("first_name", {
+            required: "* first name is required",
+            minLength: {
+              value: 2,
+              message: "* first name should include 2 or more characters",
+            },
+          })}
+          onBlur={() => {
+            trigger("first_name");
+          }}
+          
         />
+      
+        {errors.first_name && (
+          <p className={styles.ErrorForName}>{errors.first_name.message}</p>
+        )}
+
+
         <input
-          className={styles.FormSurname}
+          className={errors.last_name ? styles.InvalidFormSurname : styles.FormSurname }
           placeholder="Last Name"
+          defaultValue={personalInfo.last_name || ''}
+          autoComplete="off"
           type="text"
-          required
+          {...register("last_name", {
+            required: "* last name is required",
+            minLength: {
+              value: 2,
+              message: "* last name should include 2 or more characters",
+            },
+          })}
+          onBlur={() => {
+            trigger("last_name");
+          }}
+          
         />
+        {errors.last_name && (
+          <p className={styles.ErrorForSurname}>{errors.last_name.message}</p>
+        )}
+        
         <input
-          className={styles.FormEmail}
+          className={errors.email ? styles.InvalidFormEmail : styles.FormEmail}
           placeholder="E-mail"
+          defaultValue={personalInfo.email || ''}
+          autoComplete="off"
           type="email"
-          required
+          {...register("email", {
+            required: "* Email is required",
+            pattern: {
+              value:
+                /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/i,
+              message: "* Invalid email address",
+            },
+          })}
+          onBlur={() => {
+            trigger("email");
+          }}
         />
+        {errors.email && (
+          <p className={styles.ErrorForEmail}>{errors.email.message}</p>
+        )}
         <input
-          className={styles.FormNumber}
+          className={errors.phone ? styles.InvalidPhone : styles.Phone}
           placeholder="+ 995 5_ _ _ _"
+          autoComplete="off"
           type="tel"
-          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-          required
+          defaultValue={personalInfo.phone || ''}
+          {...register("phone", {
+            required: false,
+            pattern: {
+              value: /^\+995\d{9}$/,
+              message: "* Invalid phone number",
+            },
+          })}
+          onBlur={() => {
+            trigger("phone");
+          }}
         />
+        {errors.phone && (
+          <p className={styles.ErrorForPhone}>{errors.phone.message}</p>
+        )}
       </form>
+      
       {/* <ButtonForSteps style={styles.Buttons} step={props.count} setPageCounter={props.setPageCounter}/> */}
     </div>
   );

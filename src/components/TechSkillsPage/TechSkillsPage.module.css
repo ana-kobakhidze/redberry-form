@@ -78,11 +78,11 @@
 
 .PlaceHolder {
   position: absolute;
-  width: 195px;
+  padding-left: 43px;
+  width: 409px;
   height: 24px;
-  left: 45px;
+  left: 0px;
   top: 0;
-
   font-family: Montserrat;
   font-style: italic;
   font-weight: normal;
@@ -90,10 +90,11 @@
   line-height: 17px;
   display: flex;
   align-items: center;
-
   color: #454545;
 }
-
+.PlaceHolder:hover {
+  cursor: pointer;
+}
 .Arrow {
   position: absolute;
   width: 12.02px;
@@ -102,7 +103,20 @@
   top: 23px;
 
   background-image: url(../../assets/Vector.svg);
+  cursor: pointer;
 }
+.FlipedArrow {
+  position: absolute;
+  width: 12.02px;
+  height: 7.42px;
+  left: 422px;
+  top: 23px;
+
+  background-image: url(../../assets/Vector.svg);
+  transform: scaleY(-1);
+  cursor: pointer;
+}
+
 .Duration {
   position: absolute;
   width: 455px;
@@ -122,10 +136,42 @@
   line-height: 17px;
   display: flex;
   align-items: center;
+  z-index: 0;
 
   color: #727272;
 }
-
+.Modal {
+  position: relative;
+  padding-left: 0;
+  width: 453px;
+  height: min-content;
+  left: -1px;
+  list-style-type: none;
+  top: 36px;
+  background-color: white;
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #fe3b1f;
+  z-index: 1;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #727272;
+}
+.SkillsItem {
+  padding: 10px;
+  padding-left: 44px;
+  padding: le;
+  text-align: left;
+  width: 398px;
+}
+.SkillsItem:hover {
+  cursor: pointer;
+  color: #fe3b1f;
+}
 .AddButton {
   position: absolute;
   width: 201px;
@@ -147,26 +193,30 @@
   text-align: center;
   justify-content: center;
   color: #ffffff;
+  cursor: pointer;
+}
+.errorMessage {
+  position: absolute;
+  width: 138px;
+
+  left: 516px;
+  top: 560px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fe3b1f;
+
 }
 
 .SkillList {
-  position: absolute;
+  position: relative;
+  margin-bottom: 20px;
   width: 447px;
   height: 48px;
   left: 203px;
-  top: 615px;
-
-  background: #ffffff;
-  border: 1px solid #525557;
-  box-sizing: border-box;
-}
-
-.SelectedInfo {
-  position: absolute;
-  height: 26px;
-  left: 220px;
-  top: 612px;
-
+  top: 600px;
   font-family: Montserrat;
   font-style: italic;
   font-weight: normal;
@@ -175,15 +225,33 @@
   display: flex;
   align-items: center;
   color: #000000;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+.SelectedSkillTitle {
+  position: absolute;
+  height: 26px;
+  left: 20px;
+  top: 0;
+}
+.SelectedYears {
+  position: absolute;
+  height: 26px;
+  left: 100px;
+  top: 0;
 }
 
 .RemoveButton {
   position: absolute;
   width: 20px;
   height: 20px;
-  left: 614px;
-  top: 627px;
+  left: 409px;
+  top: 13px;
   background: url(../../assets/Remove.svg);
+}
+.RemoveButton:hover {
+  cursor: pointer;
 }
 
 /* .SecondStepButton{

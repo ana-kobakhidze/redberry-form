@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ButtonForSteps.module.css";
 
-import { PAGES } from '../../Constants/CONSTANTS';
+import { PAGES } from "../../Constants/CONSTANTS";
 
-const ButtonsForSteps = ({ step, setPageCounter }) => {
+const ButtonsForSteps = ({ step, setPageCounter, validated }) => {
+  const [errorMessage, setErrorMessage] = useState(false)
   let style;
   switch (step) {
     case PAGES.FIRST_STEP:
@@ -38,42 +39,76 @@ const ButtonsForSteps = ({ step, setPageCounter }) => {
       break;
   }
 
+ const handleNextClick = () => {
+   if(step === PAGES.FIRST_STEP && validated.firstStep){
+    return setPageCounter((prev) => prev + 1)
+   }else if(step === PAGES.SECOND_STEP && validated.secondStep){
+    return setPageCounter((prev) => prev + 1)
+   }else if(step === PAGES.SECOND_STEP && validated.secondStep === false){
+    setErrorMessage(true)
+   }
+   else if(step === PAGES.THIRD_STEP && validated.thirdStep){
+    return setPageCounter((prev) => prev + 1)
+   }else if(step === PAGES.FOURTH_STEP && validated.fourthStep){
+    return setPageCounter((prev) => prev + 1)
+   }else{  return null }
+  
+ }
+
   return (
     <div style={style}>
       <div className={styles.Wraper}>
         <span
           className={styles.Previous}
-          onClick={() => (step > PAGES.WELCOME_PAGE ? setPageCounter((prev) => prev - 1) : null)}
+          onClick={() =>
+            step > PAGES.WELCOME_PAGE
+              ? setPageCounter((prev) => prev - 1)
+              : null
+          }
         />
         <button
           className={styles.FirstStep}
-          onClick={() => setPageCounter(PAGES.FIRST_STEP)}
+          onClick={() =>
+            validated.firstStep && setPageCounter(PAGES.FIRST_STEP)
+          }
           style={{ opacity: step >= PAGES.FIRST_STEP && "1" }}
         />
         <button
           className={styles.SecondStep}
-          onClick={() => setPageCounter(PAGES.SECOND_STEP)}
+          onClick={() =>
+            (validated.firstStep || validated.secondStep) && setPageCounter(PAGES.SECOND_STEP)
+          }
           style={{ opacity: step >= PAGES.SECOND_STEP && "1" }}
         />
         <button
           className={styles.ThirdStep}
-          onClick={() => setPageCounter(PAGES.THIRD_STEP)}
+          onClick={() =>
+            validated.secondStep ||
+            (validated.thirdStep && setPageCounter(PAGES.THIRD_STEP))
+          }
           style={{ opacity: step >= PAGES.THIRD_STEP && "1" }}
         />
         <button
           className={styles.ForthStep}
-          onClick={() => setPageCounter(PAGES.FOURTH_STEP)}
+          onClick={() =>
+            validated.thirdStep ||
+            (validated.fourthStep && setPageCounter(PAGES.FOURTH_STEP))
+          }
           style={{ opacity: step >= PAGES.FOURTH_STEP && "1" }}
         />
         <button
           className={styles.FifthStep}
-          onClick={() => setPageCounter(PAGES.SUBMIT_PAGE)}
+          onClick={() =>
+            validated.fourthStep && setPageCounter(PAGES.SUBMIT_PAGE)
+          }
         />
         <span
+          type="submit"
           className={styles.Next}
-          onClick={() => (step > PAGES.WELCOME_PAGE ? setPageCounter((prev) => prev + 1) : null)}
+          onClick={() => handleNextClick()}
         />
       </div>
+      {errorMessage && validated.secondStep === false && <p className={styles.ErrorMessage}>* add at least one skill</p>}
     </div>
   );
 };

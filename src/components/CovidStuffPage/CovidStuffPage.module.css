@@ -66,6 +66,11 @@
 
   color: #ffffff;
 }
+.WorkExperience{
+  position:relative;
+  top: 20px;
+}
+
 .WorkLocation {
   position: absolute;
   top: 26px;
@@ -165,6 +170,26 @@
   color: #000000;
 }
 
+.ErrorForLocation{
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 500px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #fe3b1f;
+}
+.HadCovid{
+  position:relative;
+  bottom: 20px;
+}
+
 .Contact {
   position: absolute;
   width: 645px;
@@ -234,13 +259,35 @@
   color: #000000;
 }
 
+.ErrorForContact{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 176px;
+  top: 627px;
+  margin-left: 0;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.HadCovidAtWraper{
+  position: relative;
+  bottom: 30px;
+}
 .When {
   position: absolute;
   width: 645px;
   height: 52px;
   left: 166px;
-  top: 674px;
-
+  top: 657px;
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -248,27 +295,22 @@
   line-height: 22px;
   display: flex;
   align-items: center;
-
   color: #000000;
 }
 
 .DateOfCovid {
   width: 455px;
   height: 54px;
-  right: 38px;
-
-  top: 730px;
+  left: 163px;
+  top: 741px;
   background: #ffffff;
   border: 1px solid #525557;
   box-sizing: border-box;
-
-    
   font-family: Montserrat;
   font-style: italic;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
-
   color: #454545;
 }
 .DateOfCovid[type="date"] {
@@ -281,7 +323,30 @@
   background: url(../../assets/calendar.svg) no-repeat;
   z-index: 1;
 }
+.ErrorForDate{
+  position: absolute;
+  width: 153px;
+  height: 12px;
+  left: 166px;
+  top: 798px;
+  margin-left: 0;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  color: #fe3b1f;
+}
 
+.VaccinatedWraper{
+  position: relative;
+  bottom: 105px;
+}
+.VaccinatedDateWraper{
+  position: relative;
+  bottom: 228px;
+}
 .Vaccinate {
   position: absolute;
   width: 645px;
@@ -350,12 +415,35 @@
   color: #000000;
 }
 
+.ErrorForVaccinated{
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 195px;
+  top: 1076px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.LastVaccineWraper{
+  position: relative;
+  bottom: 216px;
+}
+
 .LastVaccine {
   position: absolute;
   width: 645px;
   height: 52px;
   left: 166px;
-  top: 1033px;
+  top: 1006px;
 
   font-family: Montserrat;
   font-style: normal;
@@ -372,10 +460,9 @@
   width: 455px;
   height: 54px;
   left: 166px;
-  top: 1129px;
+  top: 1089px;
 
   background: #ffffff;
-  /* Primary Stroke */
 
   border: 1px solid #525557;
   box-sizing: border-box;
@@ -396,6 +483,21 @@
   color: transparent;
   background: url(../../assets/calendar.svg) no-repeat;
   z-index: 2;
+}
+.ErrorsForVaccineDate{
+  position: absolute;
+  width: 277px;
+  height: 21px;
+  left: 170px;
+  top: 1144px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #fe3b1f;
 }
 
 .ThirdStepsButtons{

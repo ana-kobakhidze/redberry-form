@@ -74,6 +74,10 @@
 
   color: #000000;
 }
+.WillOrganizeDevtalk{
+  position: relative;
+  top: 2px;
+}
 .Activity {
   position: absolute;
   width: 645px;
@@ -151,12 +155,9 @@
   position: absolute;
   width: 535px;
   height: 122px;
-  left: 2px;
-  top: 66px;
-
+  left: 147px;
+  top: 588px;
   background: #ffffff;
-  /* Primary Stroke */
-
   border: 1px solid #525557;
   box-sizing: border-box;
   font-family: Montserrat;
@@ -166,10 +167,32 @@
   line-height: 16px;
   display: flex;
   align-items: center;
-
   color: #3a3a3a;
 }
 
+.DevTalkError{
+  position: absolute;
+  width: 282px;
+  height: 16px;
+  left: 147px;
+  top: 707px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #fe3b1f;
+}
+.SomethingSpecial{
+  position: relative;
+  bottom:251px
+}
+.SomethingSpecialHide {
+  position: relative;
+  bottom:10px
+}
 .Special {
   position: absolute;
   width: 645px;
@@ -190,8 +213,8 @@
   position: absolute;
   width: 535px;
   height: 89px;
-  left: 2px;
-  top: 64px;
+  left: 146px;
+  top: 809px;
   background: #ffffff;
   border: 1px solid #525557;
   box-sizing: border-box;
@@ -204,6 +227,22 @@
   align-items: center;
   color: #3a3a3a;
   padding: 25px;
+
+}
+.SomethingSpecialError{
+  position: absolute;
+  width: 282px;
+  height: 16px;
+  left: 146px;
+  top: 902px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #fe3b1f;
 }
 
 /* .ForthStepButtons{

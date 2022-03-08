@@ -96,3 +96,17 @@
   cursor: pointer;
   background: url(../../assets/Next.svg) no-repeat;
 }
+.ErrorMessage {
+  position: absolute;
+  width: 138px;
+  left: 217px;
+  bottom: 306px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fe3b1f;
+
+}

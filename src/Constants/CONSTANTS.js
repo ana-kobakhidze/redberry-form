@@ -8,3 +8,8 @@ export const PAGES = {
   THANKS_PAGE: 6,
   SUBMITED_FORMS_PAGE: 7,
 };
+
+// export const PERSONAL_INFO = {
+//   FIRSTNAME: '',
+//   LASTNAME: '',
+// }

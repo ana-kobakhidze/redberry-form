@@ -1,9 +1,104 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./TechSkillsPage.module.css";
+import axios from "axios";
 
-import ButtonForSteps from '../ButtonsForSteps/ButtonsForSteps';
+const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollectedData }) => {
+  const [data, setData] = useState();
+  const [clicked, setClick] = useState(false);
+  const [selectedSkill, setSelectedSkill] = useState("");
+  const [selectedId, setSelectedId] = useState();
+  const [duration, setDuration] = useState();
+  // const [collectedData, setCollectedData] = useState([]);
+  const [submited, setSubmit] = useState();
 
-const TechSkillsPage = () => {
+  useEffect(() => {
+    axios
+      .get("https://bootcamp-2022.devtest.ge/api/skills")
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) =>
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        )
+      );
+  }, []);
+
+  const skillClickHandler = (skill, id) => {
+    setSelectedId(id);
+    setSelectedSkill(skill);
+    setClick(false);
+  };
+
+  const dropDownHandler = () => {
+    setClick(!clicked);
+    if (collectedData.length >= 1) {
+      const updatedData = data.filter(
+        (d) => !collectedData.some((c) => c.id === d.id)
+      );
+      setData(updatedData);
+    }
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (selectedSkill !== "" && duration !== "") {
+      setSubmit(true);
+      const data = collectedData;
+      data.push({ id: selectedId, title: selectedSkill, experience: duration });
+      setDuration("");
+      setSelectedSkill("");
+      setCollectedData(data);
+    }
+    if (collectedData.length >= 1) {
+      setStepAsValid({ ...stepIsValid, secondStep: true });
+    }
+  };
+
+  const handleRemove = (id) => {
+    const list = collectedData.filter((item) => item.id !== id);
+    if (collectedData.length > 1) {
+      setCollectedData(list);
+    }
+  };
+
+  const durationHandler = (e) => {
+    setDuration(e.target.value);
+  };
+
+  let skills = [];
+  data &&
+    data.map((item) => {
+      return skills.push(
+        <li
+          className={styles.SkillsItem}
+          key={item.id}
+          onClick={() => skillClickHandler(item.title, item.id)}
+        >
+          {item.title}
+        </li>
+      );
+    });
+
+  let selectedValues = [];
+  if (collectedData.length >= 1) {
+    collectedData.map((item) => {
+      return selectedValues.push(
+        <div className={styles.SkillList} key={item.id}>
+          <p className={styles.SelectedSkillTitle}>{item.title}</p>
+          <p className={styles.SelectedYears}>
+            "Years of Experience: "{item.experience}
+          </p>
+          <span
+            className={styles.RemoveButton}
+            onClick={() => handleRemove(item.id)}
+          />
+        </div>
+      );
+    });
+  }
+
   return (
     <div className={styles.SecondStep}>
       <h3 className={styles.LeftHeader}>Tell us about your skills</h3>
@@ -20,28 +115,37 @@ const TechSkillsPage = () => {
       </div>
 
       <div className={styles.DropDown}>
-        <p className={styles.PlaceHolder}>Skills</p>
-        <i className={styles.Arrow} />
+        <p className={styles.PlaceHolder} onClick={dropDownHandler}>
+          {selectedSkill === "" ? "Skills" : selectedSkill}
+        </p>
+        {clicked ? (
+          <i className={styles.FlipedArrow} />
+        ) : (
+          <i className={styles.Arrow} />
+        )}
+        {clicked && <ul className={styles.Modal}>{skills}</ul>}
       </div>
 
-      <form>
-      <label>
-        <input
-          className={styles.Duration}
-          type="text"
-          placeholder="Experience Duration in Years"
-        />
-        <input
-          className={styles.AddButton}
-          type="submit"
-          value="Add Programming Language"
-        />
+      <form onSubmit={(e) => submitHandler(e)}>
+        <label>
+          <input
+            className={styles.Duration}
+            value={duration || ""}
+            name="duration"
+            autoComplete="off"
+            type="text"
+            placeholder="Experience Duration in Years"
+            onChange={(e) => durationHandler(e)}
+          />
+          <input
+            className={styles.AddButton}
+            type="submit"
+            value="Add Programming Language"
+          />
         </label>
       </form>
-      <div className={styles.SkillList}></div>
-      <p className={styles.SelectedInfo}>PHP  Years of Experience: 3</p>
-      <span className={styles.RemoveButton}/>
-      {/* <ButtonForSteps style={styles.SecondStepButton}/> */}
+
+      {selectedValues}
     </div>
   );
 };
