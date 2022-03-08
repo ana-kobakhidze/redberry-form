@@ -1,0 +1,24 @@
+.ThanksStep{
+    width: 1920px;
+height: 1080px;
+background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
+}
+
+.Thanks{
+    position: absolute;
+width: 1066px;
+height: 191px;
+left: 427px;
+top: 444px;
+
+font-family: Rowdies;
+font-style: normal;
+font-weight: normal;
+font-size: 96px;
+line-height: 119px;
+display: flex;
+justify-content: center;
+text-align: center;
+
+color: #FE3B1F;
+}

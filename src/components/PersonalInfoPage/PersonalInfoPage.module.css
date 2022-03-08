@@ -1,0 +1,315 @@
+.FirstStep {
+  width: 1920px;
+  height: 1080px;
+}
+
+.LeftHeader {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 105px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fe3b1f;
+}
+.RightPage {
+  width: 960px;
+  float: right;
+  background-color: black;
+  height: 1080px;
+}
+
+.RightHeader {
+  position: absolute;
+  width: 716px;
+  height: 94px;
+  left: 1116px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.RightBody {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  left: 1119px;
+  top: 195px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.FormName {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 390px;
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  color: #454545;
+}
+.InvalidFormName {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 390px;
+  background: #ffffff;
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  color: #454545;
+}
+
+.ErrorForName {
+  position: absolute;
+  width: 282px;
+  height: 16px;
+  left: 279px;
+  top: 437px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  color: #fe3b1f;
+}
+
+.FormSurname {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 481px;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding-left: 45px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #454545;
+}
+
+.InvalidFormSurname {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 481px;
+  background: #ffffff;
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding-left: 45px;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #454545;
+}
+
+
+.ErrorForSurname {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 526px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.FormEmail {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 570px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+.InvalidFormEmail{
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 570px;
+
+  background: #ffffff;
+
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+.ErrorForEmail {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 618px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.Phone {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 663px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+
+.InvalidPhone {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 235px;
+  top: 663px;
+
+  background: #ffffff;
+
+  border: 1px solid #fe3b1f;
+  box-sizing: border-box;
+  padding-left: 45px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+
+  color: #454545;
+}
+
+.ErrorForPhone {
+  position: absolute;
+  width: 302px;
+  height: 16px;
+  left: 279px;
+  top: 710px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+/* .Buttons{
+  position: absolute;
+  top: 878px;
+  left: 341px;
+} */

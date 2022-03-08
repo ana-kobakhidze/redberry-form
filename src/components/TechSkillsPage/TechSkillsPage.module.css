@@ -1,0 +1,263 @@
+.LeftHeader {
+  position: absolute;
+  width: 716px;
+  height: 128px;
+  left: 105px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #fe3b1f;
+}
+.RightPage {
+  width: 960px;
+  float: right;
+  background-color: black;
+  height: 1080px;
+}
+
+.RightHeader {
+  position: absolute;
+  width: 716px;
+  height: 94px;
+  left: 1116px;
+  top: 131px;
+
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 79px;
+  display: flex;
+  align-items: center;
+
+  color: #fe3b1f;
+}
+
+.RightBody {
+  position: absolute;
+  width: 705px;
+  height: 606px;
+  left: 1119px;
+  top: 195px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 200%;
+  text-align: left;
+  /* or 48px */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+
+  color: #ffffff;
+}
+
+.DropDown {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 200px;
+  top: 366px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+
+.PlaceHolder {
+  position: absolute;
+  padding-left: 43px;
+  width: 409px;
+  height: 24px;
+  left: 0px;
+  top: 0;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #454545;
+}
+.PlaceHolder:hover {
+  cursor: pointer;
+}
+.Arrow {
+  position: absolute;
+  width: 12.02px;
+  height: 7.42px;
+  left: 422px;
+  top: 23px;
+
+  background-image: url(../../assets/Vector.svg);
+  cursor: pointer;
+}
+.FlipedArrow {
+  position: absolute;
+  width: 12.02px;
+  height: 7.42px;
+  left: 422px;
+  top: 23px;
+
+  background-image: url(../../assets/Vector.svg);
+  transform: scaleY(-1);
+  cursor: pointer;
+}
+
+.Duration {
+  position: absolute;
+  width: 455px;
+  height: 54px;
+  left: 200px;
+  top: 451px;
+
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  padding-left: 45px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+
+  color: #727272;
+}
+.Modal {
+  position: relative;
+  padding-left: 0;
+  width: 453px;
+  height: min-content;
+  left: -1px;
+  list-style-type: none;
+  top: 36px;
+  background-color: white;
+  display: flex;
+  text-decoration: none;
+  border: 1px solid #fe3b1f;
+  z-index: 1;
+  flex-direction: column;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #727272;
+}
+.SkillsItem {
+  padding: 10px;
+  padding-left: 44px;
+  padding: le;
+  text-align: left;
+  width: 398px;
+}
+.SkillsItem:hover {
+  cursor: pointer;
+  color: #fe3b1f;
+}
+.AddButton {
+  position: absolute;
+  width: 201px;
+  height: 32px;
+  left: 454px;
+  top: 527px;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+
+  background: #fe3b1f;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+.errorMessage {
+  position: absolute;
+  width: 138px;
+
+  left: 516px;
+  top: 560px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+  color: #fe3b1f;
+
+}
+
+.SkillList {
+  position: relative;
+  margin-bottom: 20px;
+  width: 447px;
+  height: 48px;
+  left: 203px;
+  top: 600px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+}
+.SelectedSkillTitle {
+  position: absolute;
+  height: 26px;
+  left: 20px;
+  top: 0;
+}
+.SelectedYears {
+  position: absolute;
+  height: 26px;
+  left: 100px;
+  top: 0;
+}
+
+.RemoveButton {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 409px;
+  top: 13px;
+  background: url(../../assets/Remove.svg);
+}
+.RemoveButton:hover {
+  cursor: pointer;
+}
+
+/* .SecondStepButton{
+
+    position: absolute;
+    top: 878px;
+    left: 308px;
+
+} */
