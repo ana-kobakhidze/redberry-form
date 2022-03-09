@@ -19,7 +19,7 @@ const SubmitPage = ({
   }, []);
 
   const data = {
-    token: "2b9e57c2-b2ce-4d99-818f-b387ac55d6ba",
+    token: "dec1a792-e48e-4c62-9fb0-e5a5d412c728",
     first_name: personalInfo.first_name,
     last_name: personalInfo.last_name,
     email: personalInfo.email,

@@ -17,7 +17,7 @@ const SubmittedFormPage = ({techSkillList}) => {
   useEffect(() => {
     axios
       .get(
-        "https://bootcamp-2022.devtest.ge/api/applications?token=2b9e57c2-b2ce-4d99-818f-b387ac55d6ba",
+        "https://bootcamp-2022.devtest.ge/api/applications?token=dec1a792-e48e-4c62-9fb0-e5a5d412c728",
         "accept: application/json"
       )
       .then((response) => {

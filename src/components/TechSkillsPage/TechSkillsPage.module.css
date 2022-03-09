@@ -164,7 +164,6 @@
 .SkillsItem {
   padding: 10px;
   padding-left: 44px;
-  padding: le;
   text-align: left;
   width: 398px;
 }
@@ -253,11 +252,3 @@
 .RemoveButton:hover {
   cursor: pointer;
 }
-
-/* .SecondStepButton{
-
-    position: absolute;
-    top: 878px;
-    left: 308px;
-
-} */

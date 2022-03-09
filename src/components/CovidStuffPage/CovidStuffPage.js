@@ -12,8 +12,6 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
 
   useEffect(() => {
     if (isValid) {
-      setCovidInfo({ ...covidInfo, had_covid_at: getValues("had_covid_at")});
-      setCovidInfo({ ...covidInfo, vaccinated_at: getValues("vaccinated_at")});
       setValid({ ...valid, thirdStep: true });
     }
   }, [isValid]);
@@ -118,6 +116,7 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
               {...register("had_covid_at", { required: "* select Date" })}
               onBlur={() => {
                 trigger("had_covid_at");
+                setCovidInfo({ ...covidInfo, had_covid_at: getValues("had_covid_at")});
               }}
             />
             {errors.had_covid_at && (
@@ -176,6 +175,7 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
               {...register("vaccinated_at", { required: "* select date" })}
               onBlur={() => {
                 trigger("vaccinated_at");
+                setCovidInfo({ ...covidInfo, vaccinated_at: getValues("vaccinated_at")});
               }}
             />
             {errors.vaccinated_at && (
