@@ -58,8 +58,6 @@
   font-size: 24px;
   line-height: 200%;
   text-align: left;
-  /* or 48px */
-
   display: flex;
   align-items: center;
   letter-spacing: 0.05em;
@@ -101,6 +99,10 @@
   top: 367px;
   margin-left: 0;
 }
+.OfficeButton:hover {
+cursor: pointer;
+padding:15px;
+}
 .Office {
   position: absolute;
   width: 197px;
@@ -126,6 +128,10 @@
   top: 405px;
   margin-left: 0;
 }
+.HomeButton:hover {
+  cursor: pointer;
+  padding:15px;
+  }
 .Home {
   position: absolute;
   width: 98px;
@@ -152,6 +158,11 @@
   margin-left: 0;
   border: 1px solid #293b69;
 }
+.HybridButton:hover {
+  cursor: pointer;
+  padding:15px;
+}
+
 .Hybrid {
   position: absolute;
   width: 98px;
@@ -215,6 +226,10 @@
   top: 598px;
   margin-left: 0;
 }
+.YesButton:hover{
+  cursor: pointer;
+  padding:15px;
+}
 .Yes {
   position: absolute;
   width: 197px;
@@ -239,6 +254,10 @@
   left: 176px;
   top: 627px;
   margin-left: 0;
+}
+.NoButton:hover{
+  cursor: pointer;
+  padding:15px;
 }
 
 .No {
@@ -321,8 +340,10 @@
 .DateOfCovid[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
   background: url(../../assets/calendar.svg) no-repeat;
+  cursor: pointer;
   z-index: 1;
 }
+
 .ErrorForDate{
   position: absolute;
   width: 153px;
@@ -372,6 +393,10 @@
   top: 948px;
   margin-left: 0;
 }
+.VaccinatedButton:hover{
+  cursor: pointer;
+  padding:15px;
+}
 .Vaccinated {
   position: absolute;
   width: 197px;
@@ -396,6 +421,10 @@
   left: 176px;
   top: 978px;
   margin-left: 0;
+}
+.NotVaccinatedButton:hover{
+  cursor: pointer;
+  padding:15px;
 }
 .NotVaccinated {
   position: absolute;
@@ -482,6 +511,7 @@
 .DateOfVaccine[type="date"]::-webkit-calendar-picker-indicator {
   color: transparent;
   background: url(../../assets/calendar.svg) no-repeat;
+  cursor: pointer;
   z-index: 2;
 }
 .ErrorsForVaccineDate{

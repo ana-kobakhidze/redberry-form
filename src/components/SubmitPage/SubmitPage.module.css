@@ -23,7 +23,9 @@ background: radial-gradient(50% 50% at 50% 50%, #0C0D0E 0%, #151718 73.44%);
     text-align: center;
     justify-content: center;
     color: #FFFFFF;
-
+}
+.SubmitButton:hover{
+    cursor: pointer;
 }
 .BackButton{
     position: absolute;

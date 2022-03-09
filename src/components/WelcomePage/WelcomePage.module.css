@@ -64,6 +64,9 @@
     text-decoration-line: underline;
     color: #FFFFFF;
 }
+.Applications:hover{
+  cursor: pointer;
+}
 
 .Rocketman{
 position: absolute;

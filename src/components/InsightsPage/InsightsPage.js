@@ -11,12 +11,20 @@ const InsightsPage = ({ insightInfo, setInsightInfo, valid, setValid }) => {
   } = useForm({ mode: "onChange" });
 
   useEffect(() => {
+    console.log(getValues("something_special"))
     if (isValid) {
-      setValid({ ...valid, fourthStep: true });
-      setInsightInfo({
-        ...insightInfo, devtalk_topic:getValues("devtalk_topic"), something_special: getValues("something_special")
-      })
-    }
+    //   setInsightInfo({
+    //     ...insightInfo, 
+    //     something_special: getValues("something_special")
+    //   })
+    // }
+    // if(isValid && getValues('will_organize_devtalk') === 'true'){
+    //   setInsightInfo({
+    //     ...insightInfo, 
+    //     devtalk_topic: getValues("devtalk_topic")
+    //   })
+    setValid({ ...valid, fourthStep: true });
+     }
   },[isValid]);
 
   return (
@@ -45,15 +53,15 @@ const InsightsPage = ({ insightInfo, setInsightInfo, valid, setValid }) => {
           <input
             className={styles.YesButton}
             type="radio"
-            checked={insightInfo.will_organize_devtalk === "Yes"}
-            defaultValue="Yes"
+            checked={insightInfo.will_organize_devtalk === true}
+            defaultValue={true}
             {...register("will_organize_devtalk", {
               required: true,
             })}
             onClick={() =>
               setInsightInfo({
                 ...insightInfo,
-                will_organize_devtalk: "Yes",
+                will_organize_devtalk: true,
               })
             }
           />
@@ -61,22 +69,22 @@ const InsightsPage = ({ insightInfo, setInsightInfo, valid, setValid }) => {
           <input
             className={styles.NoButton}
             type="radio"
-            checked={insightInfo.will_organize_devtalk === "No"}
-            defaultValue="No"
+            checked={insightInfo.will_organize_devtalk === false}
+            defaultValue={false}
             {...register("will_organize_devtalk", {
               required: true,
             })}
             onClick={() =>
               setInsightInfo({
                 ...insightInfo,
-                will_organize_devtalk: "No",
+                will_organize_devtalk: false,
               })
             }
           />
           <label className={styles.No}>No</label>
         </div>
 
-       { getValues("will_organize_devtalk") === "Yes" &&
+       { getValues("will_organize_devtalk") === "true" &&
        <div>
         <label className={styles.Devtalk}>
           What would you speak about at Devtalk?
@@ -84,23 +92,25 @@ const InsightsPage = ({ insightInfo, setInsightInfo, valid, setValid }) => {
           <textarea
           className={styles.DevtalkTextArea}
           placeholder= "I would..."
-          defaultValue={insightInfo.devtalk_topic}
+          defaultValue={insightInfo.devtalk_topic || ""}
           {...register("devtalk_topic", {required: "* field is required"})}
           onBlur={()=>{
             trigger("devtalk_topic")
+            setInsightInfo({...insightInfo, devtalk_topic: getValues("devtalk_topic")})
           }}
           />
           {errors.devtalk_topic && (<p className={styles.DevTalkError}>{errors.devtalk_topic.message}</p>)}
           </div>
        }
-       <div className={getValues("will_organize_devtalk") === "Yes" ? styles.SomethingSpecialHide : styles.SomethingSpecial }>
+       <div className={getValues("will_organize_devtalk") === "true" ? styles.SomethingSpecialHide : styles.SomethingSpecial }>
         <label className={styles.Special}>Tell us something special</label>
-          <textarea className={styles.SpecialTextArea}
-          defaultValue={insightInfo.something_special}
+          <input className={styles.SpecialTextArea}
+          defaultValue={insightInfo.something_special || ""}
           placeholder="I..."
           {...register("something_special", {required: "* field is required"})}
           onBlur={()=>{
             trigger("something_special")
+            setInsightInfo({...insightInfo, something_special: getValues("something_special")})
           }}
           />
           {errors.something_special && (<p className={styles.SomethingSpecialError}>{errors.something_special.message}</p>)}

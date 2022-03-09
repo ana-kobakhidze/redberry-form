@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styles from "./App.module.css";
 
 import WelcomePage from "./components/WelcomePage/WelcomePage";
@@ -15,6 +16,7 @@ import { PAGES } from "./Constants/CONSTANTS";
 
 const App = () => {
   const [pageCounter, setPageCounter] = useState(0);
+
   const [valid, setValid] = useState({
     firstStep: false,
     secondStep: false,
@@ -28,26 +30,55 @@ const App = () => {
     email: "",
     phone: "",
   });
+
+ 
   // 2nd step lifted-up state
   const [techSkillInfo, setTechSKillInfo] = useState([]);
 
+  const [techSkillList, setTechSkillList] = useState([]);
+
   //3rd step lifted-up state
   const [covidInfo, setCovidInfo] = useState({
-    work_preference: "From Sairme Office",
-    had_covid: "No",
+    work_preference: "from_office",
+    had_covid: false,
     had_covid_at: "",
-    vaccinated: "No",
+    vaccinated: false,
     vaccinated_at: "",
   });
 
+
   //4rth step lifted-up state
   const [insightInfo, setInsightInfo] = useState({
-    will_organize_devtalk: "No",
+    will_organize_devtalk: false,
     devtalk_topic: "",
     something_special: "",
   });
+console.log(insightInfo);
+  useEffect(()=>{
+    if(pageCounter === PAGES.THANKS_PAGE){
+      setTimeout(() => {
+        setPageCounter(PAGES.WELCOME_PAGE)
+      }, 3000);
+    }
+  },[pageCounter])
   
-console.log(insightInfo)
+  useEffect(() => {
+    axios
+      .get("https://bootcamp-2022.devtest.ge/api/skills")
+      .then((response) => {
+        if(techSkillList.length === 0){
+          setTechSkillList(response.data);
+        }
+      })
+      .catch((error) =>
+        console.error(
+          "There has been a problem with your fetch operation:",
+          error
+        )
+      );
+  }, []);
+
+
   // rendering components by count number
   const pageHandler = () => {
     switch (pageCounter) {
@@ -70,6 +101,8 @@ console.log(insightInfo)
             setStepAsValid={setValid}
             collectedData={techSkillInfo}
             setCollectedData={setTechSKillInfo}
+            techSkillList={techSkillList}
+            // setTechSkillList={setTechSkillList}
           />
         );
       case PAGES.THIRD_STEP:
@@ -94,12 +127,22 @@ console.log(insightInfo)
         );
       case PAGES.SUBMIT_PAGE:
         return (
-          <SubmitPage count={pageCounter} setPageCounter={setPageCounter} />
+          <SubmitPage 
+          count={pageCounter} 
+          setPageCounter={setPageCounter} 
+          personalInfo={personalInfo}
+          techSkillInfo={techSkillInfo}
+          covidInfo={covidInfo}
+          insightInfo={insightInfo}
+          setTechSKillInfo={setTechSKillInfo}
+          setPersonalInfo={setPersonalInfo}
+          />
         );
       case PAGES.THANKS_PAGE:
         return <ThanksPage count={pageCounter} />;
+
       case PAGES.SUBMITED_FORMS_PAGE:
-        return <SubmittedFormPage />;
+        return <SubmittedFormPage techSkillList={techSkillList}/>;
       default:
         break;
     }
@@ -114,6 +157,7 @@ console.log(insightInfo)
           style={styles.Buttons}
           step={pageCounter}
           setPageCounter={setPageCounter}
+
         />
       ) : null}
     </div>
