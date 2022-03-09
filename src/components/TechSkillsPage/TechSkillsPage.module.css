@@ -164,7 +164,6 @@
 .SkillsItem {
   padding: 10px;
   padding-left: 44px;
-  padding: le;
   text-align: left;
   width: 398px;
 }
@@ -198,7 +197,6 @@
 .errorMessage {
   position: absolute;
   width: 138px;
-
   left: 516px;
   top: 560px;
   font-family: Montserrat;
@@ -254,10 +252,3 @@
   cursor: pointer;
 }
 
-/* .SecondStepButton{
-
-    position: absolute;
-    top: 878px;
-    left: 308px;
-
-} */
