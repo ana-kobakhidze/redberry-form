@@ -93,6 +93,10 @@
   left: 150px;
   top: 411px;
 }
+.YesButton:hover{
+  cursor: pointer;
+  padding:15px;
+}
 .Yes {
   position: absolute;
   width: 197px;
@@ -115,6 +119,10 @@
   height: 12px;
   left: 149px;
   top: 449px;
+}
+.NoButton:hover{
+  cursor: pointer;
+  padding:15px;
 }
 .No {
   position: absolute;

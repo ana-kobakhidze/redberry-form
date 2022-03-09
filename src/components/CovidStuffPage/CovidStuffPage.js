@@ -12,6 +12,8 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
 
   useEffect(() => {
     if (isValid) {
+      setCovidInfo({ ...covidInfo, had_covid_at: getValues("had_covid_at")});
+      setCovidInfo({ ...covidInfo, vaccinated_at: getValues("vaccinated_at")});
       setValid({ ...valid, thirdStep: true });
     }
   }, [isValid]);
@@ -38,7 +40,7 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
           <input
             className={styles.OfficeButton}
             type="radio"
-            checked={covidInfo.work_preference === "From Sairme Office"}
+            checked={covidInfo.work_preference === "from_office"}
             defaultValue="From Sairme Office"
             {...register("work_preference", {
               required: "* select at least one option",
@@ -46,7 +48,7 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
             onClick={() =>
               setCovidInfo({
                 ...covidInfo,
-                work_preference: "From Sairme Office",
+                work_preference: "from_office",
               })
             }
           />
@@ -54,13 +56,13 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
           <input
             className={styles.HomeButton}
             defaultValue="From Home"
-            checked={covidInfo.work_preference === "From Home"}
+            checked={covidInfo.work_preference === "from_home"}
             type="radio"
             {...register("work_preference", {
               required: "* select at least one option",
             })}
             onClick={() =>
-              setCovidInfo({ ...covidInfo, work_preference: "From Home" })
+              setCovidInfo({ ...covidInfo, work_preference: "from_home" })
             }
           />
           <label className={styles.Home}>From Home</label>
@@ -68,12 +70,12 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
             className={styles.HybridButton}
             type="radio"
             defaultValue="Hybrid"
-            checked={covidInfo.work_preference === "Hybrid"}
+            checked={covidInfo.work_preference === "hybrid"}
             {...register("work_preference", {
               required: "* select at least one option",
             })}
             onClick={() =>
-              setCovidInfo({ ...covidInfo, work_preference: "Hybrid" })
+              setCovidInfo({ ...covidInfo, work_preference: "hybrid" })
             }
           />
           <label className={styles.Hybrid}>Hybrid</label>
@@ -84,28 +86,29 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
           <input
             className={styles.YesButton}
             type="radio"
-            defaultValue="Yes"
-            checked={covidInfo.had_covid === "Yes"}
+            defaultValue= {true}
+            checked={covidInfo.had_covid === true}
             {...register("had_covid", {
               required: "* select at least one option",
             })}
-            onClick={() => setCovidInfo({ ...covidInfo, had_covid: "Yes" })}
+            onClick={() => setCovidInfo({ ...covidInfo, had_covid: true })}
+
           />
           <label className={styles.Yes}>Yes</label>
           <input
             className={styles.NoButton}
-            defaultValue="No"
-            checked={covidInfo.had_covid === "No"}
+            defaultValue={false}
+            checked={covidInfo.had_covid === false}
             type="radio"
             {...register("had_covid", {
               required: "* select at least one option",
             })}
-            onClick={() => setCovidInfo({ ...covidInfo, had_covid: "No" })}
+            onClick={() => setCovidInfo({ ...covidInfo, had_covid: false })}
           />
           <label className={styles.No}>No</label>
         </div>
 
-        {getValues("had_covid") === "Yes" && (
+        {getValues("had_covid") === 'true' && (
           <div className={styles.HadCovidAtWraper}>
             <p className={styles.When}>When?</p>
             <input
@@ -113,9 +116,6 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
               type="date"
               defaultValue={covidInfo.had_covid_at || ""}
               {...register("had_covid_at", { required: "* select Date" })}
-              onChange={(e) => {
-                setCovidInfo({ ...covidInfo, had_covid_at: e.target.value });
-              }}
               onBlur={() => {
                 trigger("had_covid_at");
               }}
@@ -130,7 +130,7 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
 
         <div
           className={
-            getValues("had_covid") === "Yes"
+            getValues("had_covid") === 'true'
               ? styles.VaccinatedWraper
               : styles.VaccinatedDateWraper
           }
@@ -139,31 +139,31 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
           <input
             className={styles.VaccinatedButton}
             type="radio"
-            checked={covidInfo.vaccinated === "Yes"}
-            defaultValue="Yes"
+            checked={covidInfo.vaccinated === true}
+            defaultValue= {true}
             {...register("vaccinated", {
               required: "* select at least one option",
             })}
-            onClick={() => setCovidInfo({ ...covidInfo, vaccinated: "Yes" })}
+            onClick={() => setCovidInfo({ ...covidInfo, vaccinated: true })}
           />
           <label className={styles.Vaccinated}>Yes</label>
           <input
             className={styles.NotVaccinatedButton}
             type="radio"
-            checked={covidInfo.vaccinated === "No"}
-            defaultValue="No"
+            checked={covidInfo.vaccinated === false}
+            defaultValue={false}
             {...register("vaccinated", {
               required: "* select at least one option",
             })}
-            onClick={() => setCovidInfo({ ...covidInfo, vaccinated: "No" })}
+            onClick={() => setCovidInfo({ ...covidInfo, vaccinated: false })}
           />
           <label className={styles.NotVaccinated}>No</label>
         </div>
         
-        {getValues("vaccinated") === "Yes" && (
+        {getValues("vaccinated") === 'true' && (
           <div
             className={
-              getValues("had_covid") === "No" && styles.LastVaccineWraper
+              getValues("had_covid") === 'false' && styles.LastVaccineWraper
             }
           >
             <p className={styles.LastVaccine}>
@@ -174,9 +174,6 @@ const CovidStuffPage = ({ covidInfo, setCovidInfo, setValid, valid }) => {
               type="date"
               defaultValue={covidInfo.vaccinated_at || ""}
               {...register("vaccinated_at", { required: "* select date" })}
-              onChange={(e) => {
-                setCovidInfo({ ...covidInfo, vaccinated_at: e.target.value });
-              }}
               onBlur={() => {
                 trigger("vaccinated_at");
               }}

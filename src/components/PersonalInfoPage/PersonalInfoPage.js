@@ -109,7 +109,7 @@ if(isValid){
         )}
         <input
           className={errors.phone ? styles.InvalidPhone : styles.Phone}
-          placeholder="+ 995 5_ _ _ _"
+          placeholder="+9955..."
           autoComplete="off"
           type="tel"
           defaultValue={personalInfo.phone || ''}

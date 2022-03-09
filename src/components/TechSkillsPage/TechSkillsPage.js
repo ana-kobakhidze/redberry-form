@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./TechSkillsPage.module.css";
-import axios from "axios";
 
-const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollectedData }) => {
-  const [data, setData] = useState();
+const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollectedData, techSkillList }) => {
+   const [data, setData] = useState(techSkillList);
   const [clicked, setClick] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState("");
   const [selectedId, setSelectedId] = useState();
@@ -11,19 +10,22 @@ const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollect
   // const [collectedData, setCollectedData] = useState([]);
   const [submited, setSubmit] = useState();
 
-  useEffect(() => {
-    axios
-      .get("https://bootcamp-2022.devtest.ge/api/skills")
-      .then((response) => {
-        setData(response.data);
-      })
-      .catch((error) =>
-        console.error(
-          "There has been a problem with your fetch operation:",
-          error
-        )
-      );
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://bootcamp-2022.devtest.ge/api/skills")
+  //     .then((response) => {
+  //       setData(response.data);
+  //       if(techSkillList.length === 0){
+  //         setTechSkillList(response.data);
+  //       }
+  //     })
+  //     .catch((error) =>
+  //       console.error(
+  //         "There has been a problem with your fetch operation:",
+  //         error
+  //       )
+  //     );
+  // }, []);
 
   const skillClickHandler = (skill, id) => {
     setSelectedId(id);
@@ -34,7 +36,8 @@ const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollect
   const dropDownHandler = () => {
     setClick(!clicked);
     if (collectedData.length >= 1) {
-      const updatedData = data.filter(
+      debugger
+      const updatedData = techSkillList.filter(
         (d) => !collectedData.some((c) => c.id === d.id)
       );
       setData(updatedData);
@@ -64,12 +67,14 @@ const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollect
   };
 
   const durationHandler = (e) => {
-    setDuration(e.target.value);
+    let value = e.target.value;
+    ;
+    setDuration(parseInt(value, 10));
   };
 
   let skills = [];
   data &&
-    data.map((item) => {
+  data.map((item) => {
       return skills.push(
         <li
           className={styles.SkillsItem}
@@ -88,7 +93,7 @@ const TechSkillsPage = ({ stepIsValid, setStepAsValid, collectedData, setCollect
         <div className={styles.SkillList} key={item.id}>
           <p className={styles.SelectedSkillTitle}>{item.title}</p>
           <p className={styles.SelectedYears}>
-            "Years of Experience: "{item.experience}
+            Years of Experience: {item.experience}
           </p>
           <span
             className={styles.RemoveButton}

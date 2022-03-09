@@ -1,7 +1,51 @@
 .SubmitedPage {
   width: 1920px;
   height: 1080px;
+  overflow: scroll;
   background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
+}
+
+.accordionContainer {
+  text-align: center;
+  margin-left: 360px;
+  padding-top: 255px;
+}
+.accordion__button:before {
+  color: white;
+}
+
+.accordionContent {
+  background-color: white;
+  width: 1078px;
+  text-align: left;
+  padding: 5px;
+  height: 1191px;
+}
+.Dropdown {
+  margin-top: 5px;
+  width: 1089px;
+  height: 52px;
+  background: #fe3b1f;
+  cursor: pointer;
+}
+.Dropdown[aria-expanded="true"]::before {
+  transform: rotate(45deg) !important;
+}
+
+.Dropdown::before {
+  display: inline-block;
+  content: "";
+  position: relative;
+  bottom: -13px;
+  right: -519px;
+  height: 5px;
+  width: 5px;
+  margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(225deg);
+  color: white;
+  
 }
 
 .Header {
@@ -23,25 +67,12 @@
   color: #ffffff;
 }
 
-.Dropdown {
-  position: absolute;
-  width: 1154px;
-  height: 52px;
-  left: 343px;
-  top: 291px;
-
-  /* Redberry Red */
-
-  background: #fe3b1f;
-}
-
 .NumberOfForms {
-  position: absolute;
+  position: relative;
+  left: 30px;
+  top: -16px;
   width: 46px;
   height: 20px;
-  left: 25px;
-  top: 0;
-
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -49,15 +80,708 @@
   line-height: 17px;
   display: flex;
   align-items: center;
-
   color: #ffffff;
 }
+.PersonalInfo {
+  position: relative;
+  bottom: 312px;
+  right: 363px;
+}
 
-.DropDownIcon {
-    position: absolute;
-    width: 12.02px;
-    height: 7.42px;
-    left: 1120px;
-    top: 22px;
-  background: url(../../assets/DropDownArrow.svg) no-repeat;
+.PersonalHead {
+  position: absolute;
+  height: 37px;
+  left: 504px;
+  top: 294px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: #fe3b1f;
+}
+.FirstName {
+  position: absolute;
+
+  height: 42px;
+  left: 506px;
+  top: 383px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.FirstName > p {
+  margin-right: 49px;
+  width: 70px;
+}
+.LastName {
+  position: absolute;
+
+  height: 42px;
+  left: 506px;
+  top: 426px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.LastName > p {
+  margin-right: 49px;
+  width: 70px;
+}
+.Email {
+  position: absolute;
+
+  height: 42px;
+  left: 506px;
+  top: 468px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.Email > p {
+  margin-right: 49px;
+  width: 69px;
+}
+.Phone {
+  position: absolute;
+
+  height: 42px;
+  left: 506px;
+  top: 504px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.Phone > p {
+  margin-right: 49px;
+  width: 68px;
+}
+.Skillset {
+  position: relative;
+  bottom: 497px;
+  right: 395px;
+}
+
+.SkillsetHead {
+  position: absolute;
+  width: 288px;
+  height: 37px;
+  left: 984px;
+  top: 480px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: #fe3b1f;
+}
+
+
+.SkillTittle{
+  position: relative;
+  width: 49px;
+  height: 26px;
+  left: 982px;
+  top: 568px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+
+}
+.SkillDuration{
+  position: relative;
+  width: 175px;
+  height: 23px;
+  left: 1080px;
+  top: 529px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.CovidStuff {
+  position: relative;
+  bottom: 648px;
+  right: 357px;
+}
+
+.CovidHeader {
+  position: absolute;
+  width: 288px;
+  height: 37px;
+  left: 491px;
+  top: 852px;
+
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+
+  /* Redberry Red */
+
+  color: #fe3b1f;
+}
+.CovidQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 493px;
+  top: 918px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.CovidRadio {
+  position: relative;
+  height: 21px;
+  left: -2px;
+  top: 23px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.FromOffice {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 503px;
+  top: 973px;
+
+  border: 1px solid #464646;
+}
+.LabelOffice {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 538px;
+  top: 971px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.FromHome {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 503px;
+  top: 1012px;
+}
+
+.LabelFromHome {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 538px;
+
+  top: 1010px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.Hybrid {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 503px;
+  top: 1050px;
+
+  border: 1px solid #293b69;
+}
+
+.LabelHybrid {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 540px;
+  top: 1048px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.HadCovidTopic {
+  position: relative;
+  bottom: 18px;
+}
+.HadCovidQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 493px;
+  top: 1101px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.YesCovidButton {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 503px;
+  top: 1180px;
+}
+
+.YesCovidLabel {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 540px;
+  top: 1178px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.NoCovidButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 503px;
+  top: 1220px;
+}
+.NoCovidLabel {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 539px;
+  top: 1219px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.DateOfCovid {
+  position: relative;
+  bottom: 18px;
+}
+.HadCovidAtQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 493px;
+  top: 1266px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.DateInput {
+  position: absolute;
+  padding: 15px;
+  width: 349px;
+  height: 54px;
+  left: 493px;
+  top: 1343px;
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #454545;
+}
+
+.DatePicker {
+  position: absolute;
+  left: 809px;
+  top: 1361px;
+}
+
+.VaccinatedTopic {
+  position: relative;
+  bottom: 78px;
+}
+.VaccinatedTopicQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 493px;
+  top: 1474px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+.VaccinatedRadio {
+  position: relative;
+  height: 21px;
+  left: -2px;
+  top: 23px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.yesVaccineButton {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 503px;
+  top: 1542px;
+}
+.YesVaccinatedLabel {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 542px;
+  top: 1541px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.VaccineNonButton {
+  position: absolute;
+  border-radius: 50px;
+
+  width: 4px;
+  height: 6px;
+  left: 507px;
+  top: 1580px;
+}
+
+.NoVaccinatedLabel {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 542px;
+  top: 1577px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.VaccinatedAtTopic {
+  position: relative;
+  bottom: 18px;
+}
+.VaccinatedAtQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 493px;
+  top: 1558px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.VaccinatedDateInput {
+  position: absolute;
+  left: 493px;
+  top: 1636px;
+
+  padding: 15px;
+  width: 349px;
+  height: 54px;
+
+  background: #ffffff;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #454545;
+}
+.VaccinatedDatePicker {
+  position: absolute;
+  left: 809px;
+  top: 1652px;
+}
+
+.Insights {
+  position: relative;
+  bottom: 703px;
+  right: 400px;
+}
+.InsightHeader {
+  position: absolute;
+  width: 288px;
+  height: 37px;
+  left: 987px;
+  top: 858px;
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: #fe3b1f;
+}
+
+.InsightQuestion {
+  position: absolute;
+  width: 447px;
+  height: 52px;
+  left: 989px;
+  top: 922px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.InsightRadio {
+  position: relative;
+  height: 21px;
+  left: -2px;
+  top: 23px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.YesButton {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  left: 998px;
+  top: 979px;
+}
+.YesLabel {
+  position: absolute;
+  width: 197px;
+  height: 21px;
+  left: 1033px;
+  top: 977px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.NoButton {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 999px;
+  top: 1018px;
+}
+.NoLabel {
+  position: absolute;
+  width: 98px;
+  height: 21px;
+  left: 1034px;
+  top: 1016px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+
+.DevTalkTopic {
+  position: relative;
+  bottom: 703px;
+  right: 403px;
+}
+.DevTalkTopicQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 989px;
+  top: 1096px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.DevTalkArea {
+  position: absolute;
+  width: 447px;
+  height: 122px;
+  left: 989px;
+  top: 1174px;
+
+  background: #ffffff;
+  padding:25px;
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #3a3a3a;
+}
+.SpecialTopic {
+  position: relative;
+  bottom: 703px;
+  right: 403px;
+}
+.SpecialTopicQuestion {
+  position: absolute;
+  width: 645px;
+  height: 52px;
+  left: 989px;
+  top: 1317px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+.SpecialTopicArea {
+  position: absolute;
+  width: 447px;
+  height: 89px;
+  left: 989px;
+  top: 1396px;
+padding:25px;
+  background: #ffffff;
+
+  border: 1px solid #525557;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+
+  color: #3a3a3a;
 }
