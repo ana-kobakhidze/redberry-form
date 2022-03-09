@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/redberry-form/static/css/main.5e042b99.css",
-    "main.js": "/redberry-form/static/js/main.1e568a9b.js",
+    "main.css": "/redberry-form/static/css/main.5437cb94.css",
+    "main.js": "/redberry-form/static/js/main.a574b78d.js",
     "static/media/stars.png": "/redberry-form/static/media/stars.e326e958c44585c6ddc4.png",
     "static/media/rocketman.png": "/redberry-form/static/media/rocketman.0c52f7768901fe44022e.png",
     "static/media/Next.svg": "/redberry-form/static/media/Next.9e5c5078eba5c7e83aff.svg",
@@ -10,11 +10,11 @@
     "static/media/calendar.svg": "/redberry-form/static/media/calendar.db5f7780b6e2a3b881d8.svg",
     "static/media/Remove.svg": "/redberry-form/static/media/Remove.687606cdf8f828130bc8.svg",
     "static/media/Vector.svg": "/redberry-form/static/media/Vector.4186298b01aca2d98670.svg",
-    "main.5e042b99.css.map": "/redberry-form/static/css/main.5e042b99.css.map",
-    "main.1e568a9b.js.map": "/redberry-form/static/js/main.1e568a9b.js.map"
+    "main.5437cb94.css.map": "/redberry-form/static/css/main.5437cb94.css.map",
+    "main.a574b78d.js.map": "/redberry-form/static/js/main.a574b78d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e042b99.css",
-    "static/js/main.1e568a9b.js"
+    "static/css/main.5437cb94.css",
+    "static/js/main.a574b78d.js"
   ]
 }
