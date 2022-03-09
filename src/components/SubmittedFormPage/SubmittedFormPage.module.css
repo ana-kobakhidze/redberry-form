@@ -4,11 +4,25 @@
   overflow: scroll;
   background: radial-gradient(50% 50% at 50% 50%, #0c0d0e 0%, #151718 73.44%);
 }
+.Header {
+  position: relative;
+  width: 1128px;
+  left: 359px;
+  top: 68px;
+  font-family: Rowdies;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.11em;
+  color: #ffffff;
+}
 
 .accordionContainer {
   text-align: center;
   margin-left: 360px;
-  padding-top: 255px;
+  padding-top: 73px;
 }
 .accordion__button:before {
   color: white;
@@ -19,7 +33,7 @@
   width: 1078px;
   text-align: left;
   padding: 5px;
-  height: 1191px;
+  height: 1332px;
 }
 .Dropdown {
   margin-top: 5px;
@@ -46,25 +60,6 @@
   transform: rotate(225deg);
   color: white;
   
-}
-
-.Header {
-  position: absolute;
-  width: 1128px;
-  height: 100px;
-  left: 359px;
-  top: 94px;
-
-  font-family: Rowdies;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 56px;
-  line-height: 70px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.11em;
-
-  color: #ffffff;
 }
 
 .NumberOfForms {
@@ -244,7 +239,7 @@
 }
 .CovidStuff {
   position: relative;
-  bottom: 648px;
+  bottom: 774px;
   right: 357px;
 }
 
@@ -609,7 +604,7 @@
 
 .Insights {
   position: relative;
-  bottom: 703px;
+  bottom: 822px;
   right: 400px;
 }
 .InsightHeader {
